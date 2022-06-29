@@ -1,0 +1,116 @@
+create database databasename
+drop database databasename
+
+create table table_name(
+column1 datatype,
+column2 datatype
+);
+
+create table persons(
+rollno int,
+firstname varchar(),
+lastname varchar()
+);
+
+
+alter table table_name
+add column_name datatype;
+drop column column_name;
+
+create table persons(
+id int not null unique,
+firstname varchar() not null,
+);
+
+create table orders(
+orderid int not null primary key;
+ordernumber int not null ,
+personid int foreign key reference persons (personid)
+);
+
+create table person(
+id int not null,
+firstname varchar(),
+lastname varchar() not null,
+age int check (age>=18)
+city varchar() default'pune'
+
+create index idx_name
+on table_name( column1);
+
+create view view_name as
+select column1,column2,.
+from table_name
+where condition;
+create view [customers] as
+select [customername,conactno]
+from customers
+where countery='pune';
+
+select column1,column2,..
+from table_name
+where condition;
+select * from customer
+where country ='pune';
+
+select column1,column2,..
+from table_name
+where country ='pune'and country ='japan';
+
+select column1,column2,...
+from table_name
+order by column1,column2,..asc|desc;
+order by country;
+
+bigint transction
+update table_name
+set column1 = value1,column2 =value2,..
+where condition;
+update persons
+set rollno = 10
+where student_name ='kumar'
+commit
+rollback
+
+select top 1 *from
+select top 5 * from student_info
+order by rollno
+)a
+order by a.rollno desc 
+
+select min (column_name)
+fron table_name
+where condition;
+select min (price) as smallestprice
+from products;
+ select count (column_name)
+from table_name
+where condition;
+select count(person)
+
+select column1,column2,..
+from table_name
+where column like pattern;
+where city like 'a%';
+where country in('paris','japan');
+
+
+
+
+
+
+
+select column_name
+from table_name
+where condition
+group by column_name
+having condition
+order by column_name;
+
+select count(customerid),country
+from customers
+group by country
+having count (customers)>=5
+order by country;
+
+
